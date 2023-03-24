@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Aplicacao.classe
 {
@@ -11,7 +8,7 @@ namespace Aplicacao.classe
     {
         public int codigoCliente { get; set; }
 
-        public string data { get; set; }
+        public DateTime data { get; set; }
 
         public int codigoProduto { get; set; }
 
@@ -22,7 +19,7 @@ namespace Aplicacao.classe
         public override string ToString()
         {
             StringBuilder _string = new StringBuilder();
-            _string.Append("codigoCliente: " + codigoCliente + " data:" + data + " codigoProduto: " + codigoProduto + " valor:" + valor + " pago: " + pago);
+            _string.Append("codigoCliente: " + codigoCliente + " data:" + data.ToString("dd/MM/yyyy") + " codigoProduto: " + codigoProduto + " valor:" + valor + " pago: " + pago);
 
             return _string.ToString();
         }

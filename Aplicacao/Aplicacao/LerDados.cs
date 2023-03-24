@@ -1,6 +1,7 @@
 ﻿using Aplicacao.classe;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -26,9 +27,9 @@ namespace Aplicacao
                     {
                         _cliente.codigoCliente = int.Parse(linha[0]);
                         _cliente.cpf = linha[1];
-                        _cliente.dataNascimento= linha[2];
-                        _cliente.telefone= linha[3];
-                        _cliente.nomeCliente= linha[4];
+                        _cliente.dataNascimento = StringToDateTime(linha[2]);
+                        _cliente.telefone = linha[3];
+                        _cliente.nomeCliente = linha[4];
 
                         clientes.Add(_cliente);
                     }
@@ -41,12 +42,12 @@ namespace Aplicacao
             }
             catch (IOException ex)
             {
-                Console.WriteLine(ex.Message+ex.StackTrace);
+                Console.WriteLine(ex.Message + ex.StackTrace);
             }
             return null;
         }
 
-        public List<Pagamento>  LerArquivoPagamentos (string caminho)
+        public List<Pagamento> LerArquivoPagamentos(string caminho)
         {
             try
             {
@@ -57,14 +58,14 @@ namespace Aplicacao
                 foreach (var line in lines)
                 {
                     var linha = line.Split(';');
-                    Pagamento _pagamento= new Pagamento();
+                    Pagamento _pagamento = new Pagamento();
                     try
                     {
                         _pagamento.codigoCliente = int.Parse(linha[0]);
-                        _pagamento.data = linha[1];
+                        _pagamento.data = StringToDateTime(linha[1]);
                         _pagamento.codigoProduto = int.Parse(linha[2]);
                         _pagamento.valor = double.Parse(linha[3]);
-                        _pagamento.pago =linha[4].Equals("t")?true:false;
+                        _pagamento.pago = linha[4].Equals("t") ? true : false;
 
                         pagamentos.Add(_pagamento);
                     }
@@ -80,6 +81,17 @@ namespace Aplicacao
                 Console.WriteLine(ex.Message + ex.StackTrace);
             }
             return null;
+        }
+
+        public DateTime StringToDateTime(string date)
+        {
+            if (date.Count() < 7)
+                return DateTime.MinValue;
+
+            if (date.Count().Equals(7)) 
+                date = date.Insert(0, "0");
+
+            return DateTime.ParseExact(s: date ,format: "ddMMyyyy", new CultureInfo("pt-BR"));
         }
 
     }
