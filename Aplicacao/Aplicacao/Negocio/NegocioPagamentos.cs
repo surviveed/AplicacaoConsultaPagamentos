@@ -9,9 +9,9 @@ namespace Aplicacao.Negocio
 {
     public class NegocioPagamentos
     {
-        public List<cliente> RetornaDevedores (List<pagamento> pagamentos, List<cliente> clientes)
+        public List<Cliente> RetornaDevedores (List<Pagamento> pagamentos, List<Cliente> clientes)
         {
-            var devedores = new List<cliente>();
+            var devedores = new List<Cliente>();
 
             foreach (var cliente in clientes)
                 foreach (var pagamento in pagamentos)

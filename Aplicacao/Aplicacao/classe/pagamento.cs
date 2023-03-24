@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Aplicacao.classe
 {
 
-    public class pagamento
+    public class Pagamento
     {
         public int codigoCliente { get; set; }
 

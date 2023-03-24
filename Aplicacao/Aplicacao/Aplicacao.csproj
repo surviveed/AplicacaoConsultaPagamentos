@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Aplicacao</RootNamespace>
     <AssemblyName>Aplicacao</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,8 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="classe\cliente.cs" />
-    <Compile Include="classe\pagamento.cs" />
+    <Compile Include="Classe\Cliente.cs" />
+    <Compile Include="Classe\Pagamento.cs" />
     <Compile Include="LerDados.cs" />
     <Compile Include="Negocio\NegocioCliente.cs" />
     <Compile Include="Negocio\NegocioPagamentos.cs" />

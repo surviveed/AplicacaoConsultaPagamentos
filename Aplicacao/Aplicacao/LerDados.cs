@@ -10,18 +10,18 @@ namespace Aplicacao
 {
     class LerDados
     {
-        public List<cliente> LerArquivoClientes(string caminho)
+        public List<Cliente> LerArquivoClientes(string caminho)
         {
             try
             {
                 var lines = File.ReadAllLines(caminho);
 
-                var clientes = new List<cliente>();
+                var clientes = new List<Cliente>();
 
                 foreach (var line in lines)
                 {
                     var linha = line.Split(';');
-                    cliente _cliente = new cliente();
+                    Cliente _cliente = new Cliente();
                     try
                     {
                         _cliente.codigoCliente = int.Parse(linha[0]);
@@ -46,18 +46,18 @@ namespace Aplicacao
             return null;
         }
 
-        public List<pagamento>  LerArquivoPagamentos (string caminho)
+        public List<Pagamento>  LerArquivoPagamentos (string caminho)
         {
             try
             {
                 var lines = File.ReadAllLines(caminho);
 
-                var pagamentos = new List<pagamento>();
+                var pagamentos = new List<Pagamento>();
 
                 foreach (var line in lines)
                 {
                     var linha = line.Split(';');
-                    pagamento _pagamento= new pagamento();
+                    Pagamento _pagamento= new Pagamento();
                     try
                     {
                         _pagamento.codigoCliente = int.Parse(linha[0]);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aplicacao.classe
 {
-    public class cliente
+    public class Cliente
     {
         public int codigoCliente { get; set; }
 
