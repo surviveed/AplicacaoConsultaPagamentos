@@ -5,3 +5,11 @@ C:\Users\jbortolini1\source\repos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.csproj
 C:\Users\jbortolini1\source\repos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.csproj.CoreCompileInputs.cache
 C:\Users\jbortolini1\source\repos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.exe
 C:\Users\jbortolini1\source\repos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.pdb
+X:\Documentos\Faculdade\5º Semestre\Laboratório de software\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\bin\Debug\Aplicacao.exe.config
+X:\Documentos\Faculdade\5º Semestre\Laboratório de software\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\bin\Debug\Aplicacao.exe
+X:\Documentos\Faculdade\5º Semestre\Laboratório de software\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\bin\Debug\Aplicacao.pdb
+X:\Documentos\Faculdade\5º Semestre\Laboratório de software\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.csproj.AssemblyReference.cache
+X:\Documentos\Faculdade\5º Semestre\Laboratório de software\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.csproj.SuggestedBindingRedirects.cache
+X:\Documentos\Faculdade\5º Semestre\Laboratório de software\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.csproj.CoreCompileInputs.cache
+X:\Documentos\Faculdade\5º Semestre\Laboratório de software\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.exe
+X:\Documentos\Faculdade\5º Semestre\Laboratório de software\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.pdb
