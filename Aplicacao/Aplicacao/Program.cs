@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Aplicacao.Controller;
+using System.ComponentModel.Design;
 
 namespace Aplicacao
 {
@@ -15,42 +17,17 @@ namespace Aplicacao
             var negocioPagamentos = new NegocioPagamentos();
             var negocioCliente = new NegocioCliente();
 
+            string retornoUsuario = "1";
 
-            var listaClientes = Ler.LerArquivoClientes(@"C:\Users\jonas\source\repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\1428624292050_clientes.txt");
-            var listaPagamentos = Ler.LerArquivoPagamentos(@"C:\Users\jonas\source\repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\1428624292736_pagamentos.txt");
-
-            Console.WriteLine("Digite o numero para escolher uma das opçoes abaixo\n" +
-                              "(1) Lista de clientes devedores\n" +
-                              "(2) Valor recebido ordenado por data\n" +
-                              "(3) Valor devido ordenado por data\n" +
-                              "(4) Valor pago por cliente");
-
-            var opcao = Console.ReadLine();
-
-            switch (int.Parse(opcao))
+            while (retornoUsuario.Equals("1"))
             {
-                case 1:
-                    foreach (var devedor in negocioCliente.RetornaDevedores(listaPagamentos, listaClientes))
-                        Console.WriteLine(devedor);
-                    break;
-                case 2:
-                    foreach (var pagamento in negocioPagamentos.ValorRecebidoPorData(listaPagamentos))
-                        Console.WriteLine(pagamento);
-                    break;
-                case 3:
-                    foreach (var pagamento in negocioPagamentos.ValorDevidoPorData(listaPagamentos))
-                        Console.WriteLine(pagamento);
-                    break;
-                case 4:
-                    foreach (var pagamento in negocioCliente.PagoPorCliente(listaPagamentos, listaClientes)) 
-                    {
-                        Console.Write(pagamento.Key);
-                        Console.WriteLine(" Valor pago é "+pagamento.Value+ " Reais");
-                    }
-                    break;
+                Controller.Controller.View();
+                Console.WriteLine("Digite 1 para voltar ao menu e 2 para fechar o programa");
+                retornoUsuario = Console.ReadLine();
             }
+            Console.WriteLine("Programa encerrado, aperte uma tecla para fechar!\n");
 
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }

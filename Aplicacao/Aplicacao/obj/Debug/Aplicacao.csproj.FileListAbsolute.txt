@@ -13,3 +13,11 @@ C:\Users\jonas\source\repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\obj\
 C:\Users\jonas\source\repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\bin\Debug\Aplicacao.exe.config
 C:\Users\jonas\source\repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\bin\Debug\Aplicacao.exe
 C:\Users\jonas\source\repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\bin\Debug\Aplicacao.pdb
+C:\Users\franc\Source\Repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\bin\Debug\Aplicacao.exe.config
+C:\Users\franc\Source\Repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\bin\Debug\Aplicacao.exe
+C:\Users\franc\Source\Repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\bin\Debug\Aplicacao.pdb
+C:\Users\franc\Source\Repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.csproj.AssemblyReference.cache
+C:\Users\franc\Source\Repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.csproj.SuggestedBindingRedirects.cache
+C:\Users\franc\Source\Repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.csproj.CoreCompileInputs.cache
+C:\Users\franc\Source\Repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.exe
+C:\Users\franc\Source\Repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\obj\Debug\Aplicacao.pdb

@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Classe\Cliente.cs" />
     <Compile Include="Classe\Pagamento.cs" />
+    <Compile Include="Controller\Controller.cs" />
     <Compile Include="LerDados.cs" />
     <Compile Include="Negocio\NegocioCliente.cs" />
     <Compile Include="Negocio\NegocioPagamentos.cs" />
