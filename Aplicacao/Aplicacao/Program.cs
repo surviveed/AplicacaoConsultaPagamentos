@@ -13,16 +13,43 @@ namespace Aplicacao
         {
             LerDados Ler = new LerDados();
             var negocioPagamentos = new NegocioPagamentos();
+            var negocioCliente = new NegocioCliente();
 
-            var listaClientes = Ler.LerArquivoClientes("C:\\Users\\jbortolini1\\source\\repos\\Aplicacao\\Aplicacao\\bin\\Debug\\1428624292050_clientes.txt");
-            var listaPagamentos = Ler.LerArquivoPagamentos("C:\\Users\\jbortolini1\\source\\repos\\Aplicacao\\Aplicacao\\bin\\Debug\\1428624292736_pagamentos.txt");
 
-            var desvedores = negocioPagamentos.RetornaDevedores(listaPagamentos, listaClientes);
+            var listaClientes = Ler.LerArquivoClientes(@"C:\Users\jonas\source\repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\1428624292050_clientes.txt");
+            var listaPagamentos = Ler.LerArquivoPagamentos(@"C:\Users\jonas\source\repos\AplicacaoConsultaPagamentos\Aplicacao\Aplicacao\1428624292736_pagamentos.txt");
 
-            foreach (var devedor in desvedores)
+            Console.WriteLine("Digite o numero para escolher uma das opçoes abaixo\n" +
+                              "(1) Lista de clientes devedores\n" +
+                              "(2) Valor recebido ordenado por data\n" +
+                              "(3) Valor devido ordenado por data\n" +
+                              "(4) Valor pago por cliente");
+
+            var opcao = Console.ReadLine();
+
+            switch (int.Parse(opcao))
             {
-                Console.WriteLine(devedor.ToString());
+                case 1:
+                    foreach (var devedor in negocioCliente.RetornaDevedores(listaPagamentos, listaClientes))
+                        Console.WriteLine(devedor);
+                    break;
+                case 2:
+                    foreach (var pagamento in negocioPagamentos.ValorRecebidoPorData(listaPagamentos))
+                        Console.WriteLine(pagamento);
+                    break;
+                case 3:
+                    foreach (var pagamento in negocioPagamentos.ValorDevidoPorData(listaPagamentos))
+                        Console.WriteLine(pagamento);
+                    break;
+                case 4:
+                    foreach (var pagamento in negocioCliente.PagoPorCliente(listaPagamentos, listaClientes)) 
+                    {
+                        Console.Write(pagamento.Key);
+                        Console.WriteLine(" Valor pago é "+pagamento.Value+ " Reais");
+                    }
+                    break;
             }
+
             Console.ReadLine();
         }
     }

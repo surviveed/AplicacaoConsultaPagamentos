@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Aplicacao.classe
 {
-    public class cliente
+    public class Cliente
     {
         public int codigoCliente { get; set; }
 
         public string cpf { get; set; }
 
-        public string dataNascimento { get; set; }
+        public DateTime dataNascimento { get; set; }
 
         public string telefone { get; set; }
 
@@ -21,7 +18,7 @@ namespace Aplicacao.classe
         public override string ToString()
         {
             StringBuilder _string = new StringBuilder();
-            _string.Append("código: " + codigoCliente + " cpf:" + cpf + " DataNascimento: " + dataNascimento + " telefone:" + telefone + " nome Cliente: " + nomeCliente);
+            _string.Append("código: " + codigoCliente + " cpf:" + cpf + " DataNascimento: " + dataNascimento.ToString("dd/MM/yyyy") + " telefone:" + telefone + " nome Cliente: " + nomeCliente);
 
             return _string.ToString();
         }

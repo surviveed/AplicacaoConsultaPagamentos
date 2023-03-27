@@ -9,19 +9,8 @@ namespace Aplicacao.Negocio
 {
     public class NegocioPagamentos
     {
-        public List<cliente> RetornaDevedores (List<pagamento> pagamentos, List<cliente> clientes)
-        {
-            var devedores = new List<cliente>();
+        public List<Pagamento> ValorRecebidoPorData(List<Pagamento> pagamentos) => pagamentos.Where(x => x.pago.Equals(true)).OrderBy(x => x.data).ToList();
 
-            foreach (var cliente in clientes)
-                foreach (var pagamento in pagamentos)
-                    if (cliente.codigoCliente == pagamento.codigoCliente && pagamento.pago is false)
-                    {
-                        devedores.Add(cliente);
-                        break;
-                    }
-
-            return devedores;
-        }
+        public List<Pagamento> ValorDevidoPorData(List<Pagamento> pagamentos) => pagamentos.Where(x => x.pago.Equals(false)).OrderBy(x => x.data).ToList();
     }
 }
